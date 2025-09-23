@@ -1,0 +1,18 @@
+services:
+  isolate:
+    build:
+      args:
+        ENV_FILE_WORKS: ${ENV_FILE_WORKS?error}
+      context: .
+      dockerfile: Dockerfile
+      secrets:
+        - my_secret_name
+        - my_secret_value
+    entrypoint: ["echo"]
+    command: ["hello"]
+
+secrets:
+  my_secret_name:
+    environment: MY_SECRET_NAME
+  my_secret_value:
+    environment: MY_SECRET_VALUE
