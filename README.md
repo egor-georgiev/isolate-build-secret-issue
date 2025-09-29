@@ -1,4 +1,6 @@
 # Isolate the secrets issue
+This repository is dedicated for a [github issue](https://github.com/docker/compose/issues/13255).
+
 Despite secret name and secret value being in the .env file and the .env file being picked up by the configuration, these envs are not picked up from the env-file for the secrets:
 ```shell
 $ docker compose --env-file .env --progress plain build --no-cache | grep '^#6'
