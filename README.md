@@ -1,4 +1,7 @@
 # Isolate the secrets issue
+**UPDATE**: I have found that the change in the behavior is caused by [this commit](https://github.com/docker/compose/commit/b387ba4a05accb92a52b48e75c46e61cab9cbc82). Please see the issue below.
+
+
 This repository is dedicated for a [github issue](https://github.com/docker/compose/issues/13255).
 
 Despite secret name and secret value being in the .env file and the .env file being picked up by the configuration, these envs are not picked up from the env-file for the secrets:
